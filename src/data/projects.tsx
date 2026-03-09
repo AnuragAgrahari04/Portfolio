@@ -7,8 +7,8 @@ import { ReactNode } from "react";
 import { SiDjango } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
 import { SiGooglecloud } from "react-icons/si";
-import { SiHuggingface } from "react-icons/si";
-import { SiLangchain } from "react-icons/si";
+
+
 import { SiNumpy } from "react-icons/si";
 import { SiOpencv } from "react-icons/si";
 import { SiPandas } from "react-icons/si";
@@ -57,8 +57,8 @@ const PS = {
   pytorch:      S("PyTorch",            <SiTensorflow />),
   sklearn:      S("Scikit-learn",       <SiScikitlearn />),
   opencv:       S("OpenCV",             <SiOpencv />),
-  langchain:    S("LangChain",          <SiLangchain />),
-  huggingface:  S("HuggingFace",        <SiHuggingface />),
+  langchain:    S("LangChain",    <span style={{fontSize:"0.65rem",fontWeight:"bold"}}>LC</span>),
+huggingface:  S("HuggingFace",  <span style={{fontSize:"0.65rem",fontWeight:"bold"}}>HF</span>),
   docker:       S("Docker",             <SiDocker />),
   ros:          S("ROS",                <FaRobot />),
   streamlit:    S("Streamlit",          <SiStreamlit />),
