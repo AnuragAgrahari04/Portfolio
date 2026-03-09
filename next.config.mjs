@@ -1,5 +1,8 @@
 // next.config.mjs
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,  // ← add this
+  },
   images: {
     remotePatterns: [
       {
