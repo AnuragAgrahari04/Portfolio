@@ -27,7 +27,7 @@ const config = {
   ],
   author: "Anurag Agrahari",
   email: "anurag.042004@gmail.com",
-  site: "https://anuragagrahari.vercel.app", // update once deployed
+  site: "https://portfolio-0411.vercel.app", // update once deployed
 
   // for github stars button
   githubUsername: "AnuragAgrahari04",
