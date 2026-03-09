@@ -4,12 +4,22 @@ import { TypographyH3, TypographyP } from "@/components/ui/typography";
 import { ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-import {
-  SiDjango, SiDocker, SiGooglecloud, SiHuggingface,
-  SiLangchain, SiNumpy, SiOpencv, SiPandas,
-  SiPostgresql, SiPython, SiReact, SiRedis,
-  SiScikitlearn, SiStreamlit, SiTensorflow, SiFastapi,
-} from "react-icons/si";
+import { SiDjango } from "react-icons/si";
+import { SiDocker } from "react-icons/si";
+import { SiGooglecloud } from "react-icons/si";
+import { SiHuggingface } from "react-icons/si";
+import { SiLangchain } from "react-icons/si";
+import { SiNumpy } from "react-icons/si";
+import { SiOpencv } from "react-icons/si";
+import { SiPandas } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { SiPython } from "react-icons/si";
+import { SiReact } from "react-icons/si";
+import { SiRedis } from "react-icons/si";
+import { SiScikitlearn } from "react-icons/si";
+import { SiStreamlit } from "react-icons/si";
+import { SiTensorflow } from "react-icons/si";
+import { SiFastapi } from "react-icons/si";
 import { FaRobot } from "react-icons/fa";
 
 const BASE_PATH = "/assets/projects-screenshots";
@@ -105,17 +115,13 @@ const projects: Project[] = [
             consultations — all from one platform.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-
           <SlideShow images={[`${BASE_PATH}/medicate/landing.png`]} />
-
           <TypographyH3 className="my-4 mt-8">97% ML Accuracy</TypographyH3>
           <p className="font-mono mb-2">
             Built with Django + Scikit-learn, the model was trained across 42
             disease classes with 132 symptom inputs. Rigorous cross-validation
-            and model selection ensured production-grade reliability across edge
-            cases.
+            and model selection ensured production-grade reliability across edge cases.
           </p>
-
           <TypographyH3 className="my-4 mt-8">Full Telehealth Platform</TypographyH3>
           <p className="font-mono mb-2">
             Real-time doctor discovery via OpenStreetMap Overpass API.
@@ -151,16 +157,13 @@ const projects: Project[] = [
             complaint to the correct department — no human triage needed.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-
           <SlideShow images={[`${BASE_PATH}/gov-complaint-box/landing.png`]} />
-
           <TypographyH3 className="my-4 mt-8">Multimodal Intake</TypographyH3>
           <p className="font-mono mb-2">
             Salesforce BLIP handles image captioning, Groq Whisper transcribes
             voice recordings, and Sentence Transformers detect duplicate
             complaints before submission — all orchestrated through LangChain.
           </p>
-
           <TypographyH3 className="my-4 mt-8">Admin Intelligence</TypographyH3>
           <p className="font-mono mb-2">
             The React admin portal surfaces an analytics dashboard, geo-heatmap
@@ -196,23 +199,18 @@ const projects: Project[] = [
             in under 100ms.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-
           <SlideShow images={[`${BASE_PATH}/plantmd-pro/landing.png`]} />
-
           <TypographyH3 className="my-4 mt-8">~95% Top-1 Accuracy</TypographyH3>
           <p className="font-mono mb-2">
             EfficientNetV2-S trained with transfer learning across 38 disease
             classes on the PlantVillage dataset. GPU-accelerated inference
-            delivers results in under 100ms with Grad-CAM heatmap visualization
-            for explainability.
+            delivers results in under 100ms with Grad-CAM heatmap visualization.
           </p>
-
           <TypographyH3 className="my-4 mt-8">Treatment Intelligence</TypographyH3>
           <p className="font-mono mb-2">
             Beyond classification — the system outputs crop-specific treatment
             plans including immediate actions, fungicide recommendations, and
-            prevention strategies. Supports Tomato, Potato, Pepper, Corn,
-            Apple, Grape, and more.
+            prevention strategies.
           </p>
         </div>
       );
@@ -242,15 +240,12 @@ const projects: Project[] = [
             <strong>40% boost in user retention</strong>.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-
           <SlideShow images={[`${BASE_PATH}/movie-recommender/landing.png`]} />
-
           <TypographyH3 className="my-4 mt-8">NLP-Enhanced Relevance</TypographyH3>
           <p className="font-mono mb-2">
             Similarity scoring runs across genres, cast, crew, keywords, and
-            overview text. The NLP pipeline significantly improved
-            recommendation quality beyond basic genre matching, measurably
-            increasing engagement.
+            overview text — significantly improving recommendation quality
+            beyond basic genre matching.
           </p>
         </div>
       );
@@ -276,27 +271,21 @@ const projects: Project[] = [
           <TypographyP className="font-mono">
             A real-time support ticket classification system with{" "}
             <strong>vector-based content gap analysis</strong>. Automatically
-            assigns severity (Critical / High / Medium / Low), routes tickets
-            to the right team, and flags knowledge base gaps before they
-            become support bottlenecks.
+            assigns severity, routes tickets to the right team, and flags
+            knowledge base gaps before they become support bottlenecks.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-
           <SlideShow images={[`${BASE_PATH}/ticket-classifier/landing.png`]} />
-
           <TypographyH3 className="my-4 mt-8">Content Gap Detection</TypographyH3>
           <p className="font-mono mb-2">
             Vector similarity matching against an existing knowledge base
             identifies tickets with no good existing answer. Real-time metrics
-            track gap ratio, successful KB matches, and total tickets analyzed
-            — with live chart visualization.
+            track gap ratio, successful KB matches, and total tickets analyzed.
           </p>
-
           <TypographyH3 className="my-4 mt-8">Configurable Display</TypographyH3>
           <p className="font-mono mb-2">
             Column visibility toggles, severity-based row filters, and a
-            sortable data table give ops teams full control over what they
-            see. Reports update live with timestamp.
+            sortable data table give ops teams full control over what they see.
           </p>
         </div>
       );
@@ -325,21 +314,17 @@ const projects: Project[] = [
             hardware, no stylus, no touchscreen required.
           </TypographyP>
           <ProjectsLinks repo={this.github} />
-
           <SlideShow images={[`${BASE_PATH}/air-canvas/landing.png`]} />
-
           <TypographyH3 className="my-4 mt-8">How It Works</TypographyH3>
           <p className="font-mono mb-2">
             HSV color masking and contour detection locate the fingertip
             frame-by-frame. Hand movement maps directly to canvas strokes in
-            real time — intuitive, hardware-free, and runs on any webcam.
+            real time — intuitive, hardware-free, runs on any webcam.
           </p>
-
           <TypographyH3 className="my-4 mt-8">80% Engagement Boost</TypographyH3>
           <p className="font-mono mb-2">
             Demonstrated live in college club sessions — sparked widespread
-            interest in computer vision as a creative and practical tool,
-            increasing student engagement by 80%.
+            interest in computer vision as a creative and practical tool.
           </p>
         </div>
       );
