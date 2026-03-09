@@ -1,45 +1,46 @@
 const config = {
-  title: "Naresh Khatri | Full-Stack Developer",
+  title: "Anurag Agrahari | ML & AI Engineer",
   description: {
-    long: "Explore the portfolio of Naresh, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
+    long: "Explore the portfolio of Anurag Agrahari, an aspiring Machine Learning Engineer specializing in AI-powered applications, LLM pipelines, RAG systems, and full-stack development. Discover projects like Gov-Complaint-Box, Medicate, and more. Recognized by Amazon for outstanding performance in their ML Summer School. Let's build something intelligent together!",
     short:
-      "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
+      "Discover the portfolio of Anurag, an ML Engineer building AI-powered applications, LLM agents, and innovative full-stack projects.",
   },
   keywords: [
-    "Naresh",
+    "Anurag Agrahari",
     "portfolio",
+    "machine learning engineer",
+    "AI developer",
+    "generative AI",
+    "LLM pipelines",
+    "RAG",
+    "LangChain",
     "full-stack developer",
-    "creative technologist",
-    "web development",
-    "3D animations",
-    "interactive websites",
-    "Coding Ducks",
-    "The Booking Desk",
-    "Ghostchat",
-    "web design",
-    "GSAP",
+    "Gov-Complaint-Box",
+    "Medicate",
+    "deep learning",
+    "computer vision",
+    "PyTorch",
     "React",
     "Next.js",
-    "Spline",
-    "Framer Motion",
+    "FastAPI",
+    "Django",
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
-  site: "https://nareshkhatri.site",
+  author: "Anurag Agrahari",
+  email: "anurag.042004@gmail.com",
+  site: "https://anuragagrahari.vercel.app", // update once deployed
 
   // for github stars button
-  githubUsername: "naresh-khatri",
-  githubRepo: "3d-portfolio",
+  githubUsername: "AnuragAgrahari04",
+  githubRepo: "3d-portfolio", // update to your forked repo name
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
-    facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/anurag-agrahari-a3b6552a6",
+    instagram: "https://www.instagram.com/anurag_agrahari_04",
+    github: "https://github.com/AnuragAgrahari04",
   },
 };
 export { config };

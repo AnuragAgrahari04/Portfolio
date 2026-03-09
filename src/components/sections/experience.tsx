@@ -5,13 +5,12 @@ import { cn } from "@/lib/utils";
 import SectionWrapper from "../ui/section-wrapper";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Briefcase, MapPin } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
-    <SectionWrapper
-      className="flex flex-col items-center justify-center min-h-[120vh] py-20 z-10"
-    >
-      <div className="w-full max-w-4xl px-4 md:px-8 mx-auto">
+    <SectionWrapper className="flex flex-col items-center justify-center min-h-[120vh] py-20 z-10">
+      <div className="w-full max-w-5xl px-4 md:px-8 mx-auto">
         <SectionHeader
           id="experience"
           title="Experience"
@@ -19,15 +18,29 @@ const ExperienceSection = () => {
           className="mb-12 md:mb-20 mt-0"
         />
 
-        <div className="flex flex-col gap-8 md:gap-12 relative">
-          {/* Connector Line - simplified to a subtle border */}
-          <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
+        <div className="relative">
+          {/* Center vertical line - teal and visible */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-teal-600/50 -translate-x-1/2 hidden md:block" />
 
-          {EXPERIENCE.map((exp, index) => (
-            <div key={exp.id} className="relative">
-              <ExperienceCard experience={exp} index={index} />
-            </div>
-          ))}
+          <div className="flex flex-col gap-12">
+            {EXPERIENCE.map((exp, index) => (
+              <div key={exp.id} className="relative flex items-start justify-center">
+
+                {/* Timeline dot - teal to match education */}
+                <div className="absolute left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-teal-700/60 border border-teal-500/50 items-center justify-center hidden md:flex top-5">
+                  <Briefcase className="w-4 h-4 text-teal-300" />
+                </div>
+
+                {/* Card - alternates left/right */}
+                <div className={cn(
+                  "w-full md:w-[46%]",
+                  index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+                )}>
+                  <ExperienceCard experience={exp} index={index} />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </SectionWrapper>
@@ -55,25 +68,41 @@ const ExperienceCard = ({
       <Card
         className={cn(
           "bg-card text-card-foreground border-border",
-          "hover:border-primary/20 transition-colors duration-300",
+          "hover:border-teal-500/30 transition-colors duration-300",
           "shadow-sm hover:shadow-md"
         )}
       >
         <CardHeader className="pb-3">
-          <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-            <div className="space-y-1">
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-col md:flex-row md:items-start justify-between gap-2">
               <CardTitle className="text-xl font-bold tracking-tight">
                 {experience.title}
               </CardTitle>
-              <div className="text-base font-medium text-muted-foreground">
-                {experience.company}
-              </div>
+              <Badge
+                variant="secondary"
+                className="w-fit font-mono text-xs font-normal shrink-0"
+              >
+                {experience.startDate} – {experience.endDate}
+              </Badge>
             </div>
-            <Badge variant="secondary" className="w-fit font-mono text-xs font-normal">
-              {experience.startDate} - {experience.endDate}
-            </Badge>
+
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+              <span className="text-base font-medium text-muted-foreground">
+                {experience.company}
+              </span>
+              {experience.location && (
+                <>
+                  <span className="text-border hidden sm:block">·</span>
+                  <span className="flex items-center gap-1 text-sm text-muted-foreground/70">
+                    <MapPin className="w-3 h-3" />
+                    {experience.location}
+                  </span>
+                </>
+              )}
+            </div>
           </div>
         </CardHeader>
+
         <CardContent className="space-y-6">
           <ul className="list-disc list-outside ml-4 space-y-2 text-base text-muted-foreground leading-relaxed">
             {experience.description.map((point, i) => (
